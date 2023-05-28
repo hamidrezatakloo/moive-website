@@ -9,7 +9,7 @@ function FooterLink(props) {
       item
       xs={12}
       sm={6}
-      md={3}
+      md={1.6}
       alignItems="center"
       justifyContent="center"
       sx={{ textAlign: "center" }}
@@ -22,6 +22,7 @@ function FooterLink(props) {
         }}
         sx={{
           color: "white",
+          fontSize: "0.63rem",
           "&:hover": { color: "#F1B569", bgcolor: "black" },
         }}
       >
