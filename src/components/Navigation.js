@@ -13,6 +13,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { lighten } from "@mui/material";
+import { NextLinkComposed } from "./LinkBehavior";
 
 const pages = ["Movies", "TV", "Series", "Box Office", "Contact Us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -96,7 +97,14 @@ function NavigationBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography
+                    component={NextLinkComposed}
+                    to={{ pathname: `/${page}` }}
+                    textAlign="center"
+                    sx={{ color: "black", textDecoration: "none" }}
+                  >
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -132,9 +140,15 @@ function NavigationBar() {
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
+                component={NextLinkComposed}
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                to={{ pathname: `/${page}` }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  textAlign: "center",
+                }}
               >
                 {page}
               </Button>
