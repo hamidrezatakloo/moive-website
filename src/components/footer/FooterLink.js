@@ -1,7 +1,6 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import React from "react";
-import { LinkBehaviour, NextLinkComposed } from "../LinkBehavior";
-import Link from "../LinkBehavior";
+import { NextLinkComposed } from "../LinkBehavior";
 
 function FooterLink(props) {
   return (
@@ -17,7 +16,7 @@ function FooterLink(props) {
       <Button
         component={NextLinkComposed}
         to={{
-          pathname: "/",
+          pathname: props.to,
           // query: { name: "test" },
         }}
         sx={{
@@ -32,4 +31,4 @@ function FooterLink(props) {
   );
 }
 
-export default FooterLink;
+export default React.memo(FooterLink);

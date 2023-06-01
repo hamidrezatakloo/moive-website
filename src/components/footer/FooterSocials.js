@@ -4,9 +4,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
 const SOCIAL_MEDIAS = [
-  { component: <InstagramIcon />, link: "instagram.com" },
-  { component: <YouTubeIcon />, link: "youtube.com" },
-  { component: <FacebookIcon />, link: "facebook.com" },
+  { component: <InstagramIcon />, link: "http://instagram.com" },
+  { component: <YouTubeIcon />, link: "http://youtube.com" },
+  { component: <FacebookIcon />, link: "http://facebook.com" },
 ];
 function FooterSocials() {
   return (

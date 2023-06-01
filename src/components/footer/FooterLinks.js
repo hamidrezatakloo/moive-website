@@ -3,19 +3,19 @@ import React from "react";
 import FooterLink from "./FooterLink";
 
 export const footerLinks = [
-  "Get The App",
-  "Help",
-  "Advertising",
-  "jobs",
-  "condition of us",
-  "privacey policy",
-  "box office",
+  { name: "Get The App", to: "/" },
+  { name: "Help", to: "/" },
+  { name: "Advertising", to: "/" },
+  { name: "jobs", to: "/" },
+  { name: "condition of us", to: "/" },
+  { name: "privacey policy", to: "/" },
+  { name: "box office", to: "/" },
 ];
 function FooterLinks() {
   return (
     <Grid container spacing={1}>
       {footerLinks.map((item, index) => (
-        <FooterLink value={item} key={index}></FooterLink>
+        <FooterLink value={item.name} to={item.to} key={index}></FooterLink>
       ))}
     </Grid>
   );
