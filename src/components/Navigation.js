@@ -148,6 +148,7 @@ function NavigationBar() {
                   color: "white",
                   display: "block",
                   textAlign: "center",
+                  "&:hover": { color: "#F1B569", bgcolor: "black" },
                 }}
               >
                 {page}
