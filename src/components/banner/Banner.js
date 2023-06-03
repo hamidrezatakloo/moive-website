@@ -1,6 +1,6 @@
 import { Divider, Grid, Stack, Typography } from "@mui/material";
-import Image from "next/image";
 import Intro from "./Intro";
+import Poster from "./Poster";
 const Banner = () => {
   return (
     <section>
@@ -14,27 +14,7 @@ const Banner = () => {
         }}
       >
         <Intro />
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{
-            position: "relative",
-            minHeight: "300px",
-          }}
-        >
-          <Image
-            src="/the last of us.jpg"
-            alt="batman"
-            fill
-            priority
-            style={{
-              objectFit: "cover",
-              padding: "0 30px",
-              borderRadius: "12px",
-            }}
-          />
-        </Grid>
+        <Poster />
         <Grid item xs={12} md={6} lg={3} sx={{ mt: { xs: "40px", md: 0 } }}>
           <Typography>
             After a global pandemic destroys civilization, a hardened survivor
