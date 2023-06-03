@@ -1,5 +1,6 @@
 import { Grid, Typography, Chip, Stack } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import Genre from "../Genre";
 const Intro = () => {
   return (
     <Grid
@@ -27,25 +28,8 @@ const Intro = () => {
       <Grid xs={12} item>
         <Stack direction={"row"} spacing={2}>
           <Chip sx={{ color: "white" }} label="Genre"></Chip>
-          <Chip
-            sx={{
-              color: "white",
-              "&:hover": { color: grey[400] },
-            }}
-            label="Action"
-            variant="outlined"
-            onClick={() => {
-              console.log("clicked!");
-            }}
-          ></Chip>
-          <Chip
-            sx={{ color: "white", "&:hover": { color: grey[400] } }}
-            label="Adventure"
-            variant="outlined"
-            onClick={() => {
-              console.log("clicked!");
-            }}
-          ></Chip>
+          <Genre label={"Action"} />
+          <Genre label={"Adventure"} />
         </Stack>
       </Grid>
       <Grid xs={12} item>
