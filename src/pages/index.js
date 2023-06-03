@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import ComingSoon from "@/components/comingsoon/CominSoon";
 import { Container, Divider } from "@mui/material";
-import Banner from "@/components/Banner";
+import Banner from "@/components/banner/Banner";
 
 const inter = Inter({ subsets: ["latin"] });
 
